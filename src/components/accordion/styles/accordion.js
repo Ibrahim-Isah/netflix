@@ -80,6 +80,7 @@ export const Body = styled.div`
     padding: 0.8em 2.2em;
     white-space: pre-wrap;
     user-select: none;
+    margin-bottom: 1px;
 
     @media (max-width: 600px) {
         font-size:16px;
