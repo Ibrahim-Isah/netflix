@@ -6,9 +6,9 @@ import { useState } from 'react'
 
 
 export default function Signin() {
-    const [emailAddress, setEmailAddress] = useState();
-    const [password, setPassword] = useState();
-    const [error, setError] = useState();
+    const [emailAddress, setEmailAddress] = useState('');
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
 
     const isInvalid = password === '' || emailAddress === '';
     const handleSignin = (event) => {
@@ -34,7 +34,7 @@ export default function Signin() {
                         value={password}
                         onChange={({target}) => setPassword(target.value)}
                     />
-                    <Form.Submit disable={isInvalid} type="submit">
+                    <Form.Submit disabled={isInvalid} type="submit">
                         Sign In
                     </Form.Submit>
                 </Form.Base>
