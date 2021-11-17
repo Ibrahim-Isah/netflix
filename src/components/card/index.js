@@ -51,8 +51,24 @@ Card.Text = function CardText({ children, ...restProps }) {
 Card.Entities = function CardEntities({ children, ...restProps }) {
 	return <Entities {...restProps}>{children}</Entities>;
 };
+
 Card.Meta = function CardMeta({ children, ...restProps }) {
 	return <Meta {...restProps}>{children}</Meta>;
+};
+
+Card.Feature = function CardFeature({ category, children, ...restProps }) {
+	const { showFeature, itemFeature, setShowFeature } = useContext(
+		FeatureContext
+	);
+
+	return showFeature ? (
+		<Feature
+			src={`/images/${category}/${itemFeature.genre}/${itemFeature.slug}/large.jpg`}
+			{...restProps}
+		>
+			<Content>{/* we continue here tomorrow */}</Content>
+		</Feature>
+	) : null;
 };
 
 Card.Item = function CardItem({ children, ...restProps }) {
