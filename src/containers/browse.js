@@ -4,7 +4,7 @@ import { FirebaseContext } from '../context/firebase';
 import { useContext, useState, useEffect } from 'react';
 import { Loading, Header, Card } from '../components';
 import * as ROUTES from '../constants/route';
-import logo from '../logo.svg';
+import logo from '../logo.png';
 import Fuse from 'fuse.js';
 import { FooterContainer } from '../containers/footer';
 import { Player } from '../components';
