@@ -39,6 +39,10 @@ export default function Signin() {
 				<Form>
 					<Form.Title>Sign In</Form.Title>
 					{error && <Form.Error>{error}</Form.Error>}
+					<Form.Disclamer>
+						Do not use your real credentials because this is a fake netflix for
+						research purposes
+					</Form.Disclamer>
 					<Form.Base onSubmit={handleSignin} method='POST'>
 						<Form.Input
 							placeholder='Email address'
